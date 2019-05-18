@@ -1,13 +1,18 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: lightcoral;
   background-size: cover;
   font-family: Tahoma, Geneva, sans-serif;
 }
 
 h1 {
   text-align: center;
+  font-size: 10vw;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 10%;
+  transform: translateZ(20px);
 }
 
 ul {
@@ -20,6 +25,7 @@ ul {
 
 li {
   float: right;
+  right: 30%;
 }
 
 li a {
@@ -34,23 +40,59 @@ li a:hover {
   background-color: #111;
 }
 
-.egg {
+.parallax {
+  background-image: linear-gradient(135deg, #ff00ba 0%, #fae713 100%);
+  min-height: 400px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  transform-style: preserve-3d;
+  transform: perspective(2000px);
+  z-index: -1;
+}
+
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+#container {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
   display: none;
+}
+
+.egg {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 99;
+  z-index: 97;
   pointer-events: none;
+  display: none;
 }
 
 canvas {
   position: fixed;
-  display: none;
+  z-index: 97;
   vertical-align: baseline;
+  display: none;
 }
 
 #frog {
   display: none;
+}
+
+.content {
+  max-width: 70%;
+  margin: auto;
 }

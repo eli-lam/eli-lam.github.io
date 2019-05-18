@@ -1,4 +1,4 @@
-/* */
+/*Konami Code*/
 
 function konamiCode(cb) {
   var input = "";
@@ -15,17 +15,12 @@ function konamiCode(cb) {
 
 konamiCode(function() {
   document.body.style.backgroundImage = "url('./assets/gdimpbg.jpg')";
-  setCanvas();
-  draw();
-});
-
-/* Activate canvas */
-function setCanvas() {
   document.getElementById("container").style.display = "inline";
   document.getElementById("canvas").style.display = "inline-block";
   document.getElementById("canvas").width = window.innerWidth;
   document.getElementById("canvas").height = window.innerHeight;
-}
+  draw();
+});
 
 /* Bouncing frog */
 var ctx = null;
