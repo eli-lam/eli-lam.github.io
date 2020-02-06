@@ -14,7 +14,7 @@ function konamiCode(cb) {
 }
 
 konamiCode(function() {
-  document.body.style.backgroundImage = "url('./assets/gdimpbg.jpg')";
+  document.body.style.backgroundImage = "url('./assets/img/gdimpbg.jpg')";
   document.getElementById("container").style.display = "inline";
   document.getElementById("canvas").style.display = "inline-block";
   document.getElementById("canvas").width = window.innerWidth;
