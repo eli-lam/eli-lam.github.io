@@ -3,9 +3,9 @@
 
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#3273DC">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 	<script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
 	<script src="./assets/js/vanilla-tilt.js"></script>
@@ -13,7 +13,7 @@
 </head>
 
 <body>
-	<section class="hero">
+	<section class="hero is-fullheight">
 		<div class="hero-head">
 			<div class="container is-max-widescreen">
 				<nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
@@ -33,7 +33,7 @@
 					<div class="navbar-menu">
 						<div class="navbar-end">
 							<a class="navbar-item is-tab" href="/">Home</a>
-							<a class="navbar-item is-tab" href="/">Projects</a>
+							<a class="navbar-item is-tab" href="/projects">Projects</a>
 							<a class="navbar-item is-tab" href="/">About</a>
 						</div>
 					</div>
@@ -51,11 +51,7 @@
 		</div>
 		-->
 
-		<div class="container is-max-widescreen">
-			<div class="hero-body">
-				{{content}}
-			</div>
-		</div>
+		{{content}}
 	</section>
 </body>
 
