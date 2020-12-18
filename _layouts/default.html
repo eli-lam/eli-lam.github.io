@@ -1,58 +1,62 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#3273DC">
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
-    <script src="./assets/js/vanilla-tilt.js"></script>
-    <script src="./assets/js/eastereggs.js"></script>
-  </head>
 
-  <body>
-    <section class="hero">
-			<div class="hero-head">
-				<div class="container">
-					<nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
-						<div class="navbar-brand">
-							{% if page.url == '/' %}
-								<a id="unicorn-btn" class="navbar-item" href="https://sindresorhus.com/unicorn" title="Click me!">🦄</a>
-							{% else %}
-								<span class="navbar-item">Elizabeth Lam</span>
-							{% endif %}
-							<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-								<span aria-hidden="true"></span>
-								<span aria-hidden="true"></span>
-								<span aria-hidden="true"></span>
-							</a>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="theme-color" content="#3273DC">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
+	<script src="./assets/js/vanilla-tilt.js"></script>
+	<script src="./assets/js/eastereggs.js"></script>
+</head>
+
+<body>
+	<section class="hero">
+		<div class="hero-head">
+			<div class="container is-max-widescreen">
+				<nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
+					<div class="navbar-brand">
+						{% if page.url == '/' %}
+						<a id="unicorn-btn" class="navbar-item" href="https://sindresorhus.com/unicorn"
+							title="Click me!">🐈</a>
+						{% else %}
+						<span class="navbar-item">Elizabeth Lam</span>
+						{% endif %}
+						<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+							<span aria-hidden="true"></span>
+							<span aria-hidden="true"></span>
+							<span aria-hidden="true"></span>
+						</a>
+					</div>
+					<div class="navbar-menu">
+						<div class="navbar-end">
+							<a class="navbar-item is-tab" href="/">Home</a>
+							<a class="navbar-item is-tab" href="/">Projects</a>
+							<a class="navbar-item is-tab" href="/">About</a>
 						</div>
-						<div class="navbar-menu">
-							<div class="navbar-end">
-								<a class="navbar-item is-tab" href="/">Home</a>
-								<a class="navbar-item is-tab" href="/">Projects</a>
-								<a class="navbar-item is-tab" href="/">About</a>
-							</div>
-						</div>
-					</nav>
-				</div>
+					</div>
+				</nav>
 			</div>
+		</div>
 
-			<div class="egg" id="container">
-				<canvas class="frog_particle" id="canvas"></canvas>
-			  </div>
-		  
-			  <div>
-				<img id="frog" src="./assets/img/frog.jpg" />
-			  </div>
-		  
-			  <div class="containter">
-				  {{ content }}
-			  </div>
-		</section>
-  </body>
+		<!--
+		<div class="egg">
+			<canvas class="frog_particle" id="canvas"></canvas>
+		</div>
+
+		<div>
+			<img id="frog" src="./assets/img/frog.jpg" />
+		</div>
+		-->
+
+		<div class="container is-max-widescreen">
+			<div class="hero-body">
+				{{content}}
+			</div>
+		</div>
+	</section>
+</body>
+
 </html>
