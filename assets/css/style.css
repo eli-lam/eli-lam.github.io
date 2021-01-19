@@ -1,86 +1,3 @@
-body {
-  margin: 0;
-  padding: 0;
-  background-size: cover;
-  font-family: Tahoma, Geneva, sans-serif;
-}
-
-h1 {
-  text-align: center;
-  font-size: 10vw;
-  position: absolute;
-  left: 0;
-  width: 100%;
-  top: 10%;
-  transform: translateZ(20px);
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
-
-li {
-  float: right;
-  right: 30%;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #111;
-}
-
-.parallax {
-  background-image: linear-gradient(135deg, #ff00ba 0%, #fae713 100%);
-  min-height: 400px;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.myname {
-  /*background-image: linear-gradient(135deg, #ff00ba 0%, #fae713 100%);*/
-  min-height: 400px;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  transform-style: preserve-3d;
-  transform: perspective(2000px);
-  z-index: 2;
-}
-
-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
-#container {
-  position: fixed;
-  height: 100vh;
-  width: 100%;
-  display: none;
-}
-
 .egg {
   position: fixed;
   top: 0;
@@ -92,7 +9,15 @@ img {
   display: none;
 }
 
-canvas {
+#frogbox {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  display: none;
+}
+
+
+#canvas {
   position: fixed;
   z-index: 97;
   vertical-align: baseline;
@@ -103,11 +28,11 @@ canvas {
   display: none;
 }
 
-.content {
-  max-width: 70%;
-  margin: auto;
-}
+.navbar-menu.is-active { 
+  position: absolute; 
+  width: 100%; 
+} 
 
-.bodytext {
-  min-height: 1000px;
+html { 
+  overflow-y: auto;
 }

@@ -15,7 +15,7 @@ function konamiCode(cb) {
 
 konamiCode(function() {
   document.body.style.backgroundImage = "url('./assets/img/gdimpbg.jpg')";
-  document.getElementById("container").style.display = "inline";
+  document.getElementById("frogbox").style.display = "inline";
   document.getElementById("canvas").style.display = "inline-block";
   document.getElementById("canvas").width = window.innerWidth;
   document.getElementById("canvas").height = window.innerHeight;
@@ -25,6 +25,7 @@ konamiCode(function() {
 /* Bouncing frog */
 var ctx = null;
 var anim_img = null;
+var frog = "./assets/img/frog.jpg";
 
 var x = Math.floor(Math.random() * 100 + 1);
 var y = Math.floor(Math.random() * 100 + 1);
@@ -48,7 +49,7 @@ function draw() {
   anim_img.onload = function() {
     setInterval("bounce()", 8);
   };
-  anim_img.src = "./assets/frog.jpg";
+  anim_img.src = "./assets/img/frog.jpg";
 }
 
 function bounce() {

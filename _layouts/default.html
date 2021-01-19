@@ -7,8 +7,9 @@
 	<meta name="theme-color" content="#3273DC">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
 	<script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
-	<script src="./assets/js/vanilla-tilt.js"></script>
+	<script src="./assets/js/mainsite.js"></script>
 	<script src="./assets/js/eastereggs.js"></script>
 </head>
 
@@ -19,18 +20,18 @@
 				<nav class="navbar has-shadow" role="navigation" aria-label="main navigation">
 					<div class="navbar-brand">
 						{% if page.url == '/' %}
-						<a id="unicorn-btn" class="navbar-item" href="https://sindresorhus.com/unicorn"
+						<a id="unicorn-btn" class="navbar-item" href="./assets/img/nightowlbusybeeyoubelongintechtakeprideincodeyou.jpg"
 							title="Click me!">🐈</a>
 						{% else %}
 						<span class="navbar-item">Elizabeth Lam</span>
 						{% endif %}
-						<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+						<a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
 							<span aria-hidden="true"></span>
 							<span aria-hidden="true"></span>
 							<span aria-hidden="true"></span>
 						</a>
 					</div>
-					<div class="navbar-menu">
+					<div class="navbar-menu" id="navMenu">
 						<div class="navbar-end">
 							<a class="navbar-item is-tab" href="/">Home</a>
 							<a class="navbar-item is-tab" href="/portfolio">Portfolio</a>
@@ -41,18 +42,12 @@
 			</div>
 		</div>
 
-		<!--
-		<div class="egg">
-			<canvas class="frog_particle" id="canvas"></canvas>
-		</div>
-
-		<div>
-			<img id="frog" src="./assets/img/frog.jpg" />
-		</div>
-		-->
-
 		{{content}}
 	</section>
+
+	<div class="egg" id="frogbox">
+		<canvas class="frog_particle" id="canvas"></canvas>
+	</div>
 </body>
 
 </html>
