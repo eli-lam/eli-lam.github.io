@@ -34,13 +34,12 @@ var size_x;
 var size_y;
 
 var frog = new Image();
+frog.src = "./assets/img/frog.jpg";
 
 frog.onload = function(){
   size_y = frog.height;
   size_x = frog.width;
 }
-
-frog.src = "./assets/img/frog.jpg";
 
 var windowWidth = window.innerWidth;
 var windowHeight = window.innerHeight;
@@ -63,7 +62,6 @@ function draw() {
 }
 
 function bounce() {
-  console.log(size_x);
   ctx.clearRect(0, 0, windowWidth, windowHeight);
   ctx.drawImage(anim_img, x, y);
   x = x + xspeed;
