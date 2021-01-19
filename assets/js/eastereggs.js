@@ -25,14 +25,22 @@ konamiCode(function() {
 /* Bouncing frog */
 var ctx = null;
 var anim_img = null;
-var frog = "./assets/img/frog.jpg";
 
 var x = Math.floor(Math.random() * 100 + 1);
 var y = Math.floor(Math.random() * 100 + 1);
 var xspeed = 3;
 var yspeed = 3;
-var size_x = frog.width;
-var size_y = frog.height;
+var size_x;
+var size_y;
+
+var frog = new Image();
+
+frog.onload = function(){
+  size_y = frog.height;
+  size_x = frog.width;
+}
+
+frog.src = "./assets/img/frog.jpg";
 
 var windowWidth = window.innerWidth;
 var windowHeight = window.innerHeight;
@@ -40,6 +48,8 @@ var windowHeight = window.innerHeight;
 window.addEventListener("resize", function() {
   windowWidth = window.innerWidth;
   windowHeight = window.innerHeight;
+  document.getElementById("canvas").width = window.innerWidth;
+  document.getElementById("canvas").height = window.innerHeight;
 });
 
 function draw() {
@@ -53,6 +63,7 @@ function draw() {
 }
 
 function bounce() {
+  console.log(size_x);
   ctx.clearRect(0, 0, windowWidth, windowHeight);
   ctx.drawImage(anim_img, x, y);
   x = x + xspeed;
